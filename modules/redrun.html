@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/.mbs.lib.readline.html">.mbs.lib.readline</a></li>
+  <li><a href="../modules/.mbs.modules.readline.html">.mbs.modules.readline</a></li>
+  <li><a href="../modules/RemoteShell.handler.html">RemoteShell.handler</a></li>
+  <li><a href="../modules/RemoteShell.window.html">RemoteShell.window</a></li>
+  <li><a href="../modules/bluenet.html">bluenet</a></li>
+  <li><strong>redrun</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>redrun</code></h1>
+<p>RedRun - A very tiny background task runner using the native top-level coroutine
+ By JackMacWindows
+ Licensed under CC0, though I'd appreciate it if this notice was left in place.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#init">init (silent)</a></td>
+	<td class="summary">Initializes the RedRun runtime.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#start">start (func, name)</a></td>
+	<td class="summary">Starts a coroutine running in the background.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getid">getid (name)</a></td>
+	<td class="summary">Returns the task ID for a named task.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getstate">getstate (id)</a></td>
+	<td class="summary">Returns a table of custom state held by the task.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kill">kill (id)</a></td>
+	<td class="summary">Kills a task immediately.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#terminate">terminate (id)</a></td>
+	<td class="summary">Terminates a task.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "init"></a>
+    <strong>init (silent)</strong>
+    </dt>
+    <dd>
+    Initializes the RedRun runtime.  This is called automatically, but it's still available if desired.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">silent</span>
+         Set to any truthy value to inhibit the status message.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "start"></a>
+    <strong>start (func, name)</strong>
+    </dt>
+    <dd>
+    Starts a coroutine running in the background.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+         The function to run.
+        </li>
+        <li><span class="parameter">name</span>
+         A value to use to identify this task later. Can be any value, including nil/none.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The ID of the started task.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getid"></a>
+    <strong>getid (name)</strong>
+    </dt>
+    <dd>
+    Returns the task ID for a named task.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         The name of the task.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The ID of the task with the name, or nil if not found.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getstate"></a>
+    <strong>getstate (id)</strong>
+    </dt>
+    <dd>
+    Returns a table of custom state held by the task.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+         The ID of the task.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The state table held by the task, or nil if the task doesn't exist.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kill"></a>
+    <strong>kill (id)</strong>
+    </dt>
+    <dd>
+    Kills a task immediately.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+         The ID of the task.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "terminate"></a>
+    <strong>terminate (id)</strong>
+    </dt>
+    <dd>
+    Terminates a task.  This sends it one terminate event, and then removes it from the queue.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+         The ID of the task.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-11-10 17:00:10 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

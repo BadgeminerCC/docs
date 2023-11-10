@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#"> </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/.mbs.lib.readline.html">.mbs.lib.readline</a></li>
+  <li><a href="../modules/.mbs.modules.readline.html">.mbs.modules.readline</a></li>
+  <li><strong>RemoteShell.handler</strong></li>
+  <li><a href="../modules/RemoteShell.window.html">RemoteShell.window</a></li>
+  <li><a href="../modules/bluenet.html">bluenet</a></li>
+  <li><a href="../modules/redrun.html">redrun</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>RemoteShell.handler</code></h1>
+<p></p>
+<p></p>
+
+
+<h2><a href="#"> </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#RSH.hostRemote">RSH.hostRemote (url)</a></td>
+	<td class="summary">creates a Remote Handler</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:setCursorPos">output:setCursorPos (x, y)</a></td>
+	<td class="summary">Transmits setCursorPos</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:write">output:write (text)</a></td>
+	<td class="summary">Transmits write</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:blit">output:blit (text, fg, bg)</a></td>
+	<td class="summary">Transmits blit</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:clear">output:clear ()</a></td>
+	<td class="summary">Transmits clear</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:clearLine">output:clearLine ()</a></td>
+	<td class="summary">Transmits clearLine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:setCursorBlink">output:setCursorBlink (blink)</a></td>
+	<td class="summary">Transmits setCursorBlink</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:setBackgroundColor">output:setBackgroundColor (color)</a></td>
+	<td class="summary">Transmits setBackgroundColor</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:setTextColor">output:setTextColor (color)</a></td>
+	<td class="summary">Transmits setTextColor</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output:scroll">output:scroll (n)</a></td>
+	<td class="summary">Transmits scroll</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name=""></a> </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "RSH.hostRemote"></a>
+    <strong>RSH.hostRemote (url)</strong>
+    </dt>
+    <dd>
+    creates a Remote Handler
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">url</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        RemoteHandler
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:setCursorPos"></a>
+    <strong>output:setCursorPos (x, y)</strong>
+    </dt>
+    <dd>
+    Transmits setCursorPos
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:write"></a>
+    <strong>output:write (text)</strong>
+    </dt>
+    <dd>
+    Transmits write
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:blit"></a>
+    <strong>output:blit (text, fg, bg)</strong>
+    </dt>
+    <dd>
+    Transmits blit
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">fg</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">bg</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:clear"></a>
+    <strong>output:clear ()</strong>
+    </dt>
+    <dd>
+    Transmits clear
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:clearLine"></a>
+    <strong>output:clearLine ()</strong>
+    </dt>
+    <dd>
+    Transmits clearLine
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:setCursorBlink"></a>
+    <strong>output:setCursorBlink (blink)</strong>
+    </dt>
+    <dd>
+    Transmits setCursorBlink
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">blink</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:setBackgroundColor"></a>
+    <strong>output:setBackgroundColor (color)</strong>
+    </dt>
+    <dd>
+    Transmits setBackgroundColor
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:setTextColor"></a>
+    <strong>output:setTextColor (color)</strong>
+    </dt>
+    <dd>
+    Transmits setTextColor
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output:scroll"></a>
+    <strong>output:scroll (n)</strong>
+    </dt>
+    <dd>
+    Transmits scroll
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">n</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/ldoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-11-10 17:00:10 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
